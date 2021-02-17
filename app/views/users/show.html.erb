@@ -44,13 +44,9 @@
 </div>
 
 <div class="user-images">
-  <div class="wrapper">
-    <img src="https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dGVjaG5vbG9neXxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" srcset="">
-  </div>
-  <div class="wrapper">
-    <img src="https://images.unsplash.com/photo-1599989640500-8516e87bf9f4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODJ8fGFydHxlbnwwfDJ8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" srcset="">
-  </div>
-  <div class="wrapper">
-    <img src="https://images.unsplash.com/photo-1490059830487-2f86fddb2b4b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHN0cmVldCUyMHBob3RvZ3JhcGh5fGVufDB8MnwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" srcset="">
-  </div>
+  <% @posts.each do |post| %>
+    <div class="wrapper">
+      <%= image_tag post.image %>
+    </div>
+  <% end %>
 </div>
