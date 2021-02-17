@@ -18,6 +18,9 @@
         <a href="<%= user_path(current_user) %>">
           <i class="fa fa-user"></i>
         </a>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fa fa-sign-out"></i>
+        <% end %>
       <% else %>
         <a href="<%= new_user_session_path %>">
           <i class="fa fa-sign-in"></i>
